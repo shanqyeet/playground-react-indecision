@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
 import AddOption from './AddOption';
 import Header from './Header';
 import Action from './Action';
@@ -80,18 +79,20 @@ class IndecisionApp extends Component {
                 <Header  
                     subTitle={this.state.headerSubtitle}
                 />
-                <Action 
-                    hasOptions={this.state.options.length > 0} 
-                    handlePick={this.handlePick}
-                />
-                <Options
-                    options={this.state.options} 
-                    handleDeleteOption={this.handleDeleteOption}
-                    handleSingleDelete = {this.handleSingleDelete}
-                />
-                <AddOption 
-                    handleAddOption={this.handleAddOption}
-                />
+                <div className="container">
+                    <Action 
+                        hasOptions={this.state.options.length > 0} 
+                        handlePick={this.handlePick}
+                    />
+                    <Options
+                        options={this.state.options} 
+                        handleDeleteOption={this.handleDeleteOption}
+                        handleSingleDelete = {this.handleSingleDelete}
+                    />
+                    <AddOption 
+                        handleAddOption={this.handleAddOption}
+                    />    
+                </div>
                 <OptionModal
                     selectedOption={this.state.selectedOption}
                     closeModal={this.closeModal}
