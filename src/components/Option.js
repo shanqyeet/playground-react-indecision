@@ -2,9 +2,11 @@ import React, {Component} from 'react';
 
 const Option = (props) => {
     return (
-        <div>
+        <div className="option">
             <div>
-               {props.option} 
+                <p className="option__text">
+                    {props.count}. {props.option} 
+                </p>
             </div>
             <button 
                 className="button button--link"

@@ -9,7 +9,7 @@ class IndecisionApp extends Component {
     state = {
         headerTitle: "This is the Indecision App",
         headerSubtitle: "Put your life in the hands of a computer",
-        options:["first thing", "second thing", "third thing"],
+        options:[],
         selectedOption: undefined,
     };
 
@@ -84,14 +84,16 @@ class IndecisionApp extends Component {
                         hasOptions={this.state.options.length > 0} 
                         handlePick={this.handlePick}
                     />
-                    <Options
-                        options={this.state.options} 
-                        handleDeleteOption={this.handleDeleteOption}
-                        handleSingleDelete = {this.handleSingleDelete}
-                    />
-                    <AddOption 
-                        handleAddOption={this.handleAddOption}
-                    />    
+                    <div className="widget">
+                        <Options
+                            options={this.state.options} 
+                            handleDeleteOption={this.handleDeleteOption}
+                            handleSingleDelete = {this.handleSingleDelete}
+                        />
+                        <AddOption 
+                            handleAddOption={this.handleAddOption}
+                        />    
+                    </div>
                 </div>
                 <OptionModal
                     selectedOption={this.state.selectedOption}
