@@ -9,7 +9,7 @@ import OptionModal from './OptionModal';
 class IndecisionApp extends Component {
     state = {
         headerTitle: "This is the Indecision App",
-        headrSubtitle: "Put your life in the hands of a computer",
+        headerSubtitle: "Put your life in the hands of a computer",
         options:["first thing", "second thing", "third thing"],
         selectedOption: undefined,
     };
@@ -78,7 +78,7 @@ class IndecisionApp extends Component {
         return (
             <div>
                 <Header  
-                    subtitle={this.state.headerSubtitle}
+                    subTitle={this.state.headerSubtitle}
                 />
                 <Action 
                     hasOptions={this.state.options.length > 0} 
